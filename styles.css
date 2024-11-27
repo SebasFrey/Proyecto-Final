@@ -1,9 +1,10 @@
 :root {
-    --primary-color: #2c3e50;
-    --secondary-color: #3498db;
-    --background-color: #ecf0f1;
-    --text-color: #333;
-    --border-color: #bdc3c7;
+    --primary-color: #000000;
+    --secondary-color: #333333;
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --border-color: #cccccc;
+    --hover-color: #f0f0f0;
 }
 
 * {
@@ -28,7 +29,7 @@ body {
 
 header {
     background-color: var(--primary-color);
-    color: white;
+    color: var(--background-color);
     padding: 1rem 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -49,9 +50,9 @@ h2 {
 }
 
 .form-section, .table-section {
-    background-color: white;
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 2rem;
     margin-bottom: 2rem;
 }
@@ -85,8 +86,8 @@ input[type="date"] {
 }
 
 button {
-    background-color: var(--secondary-color);
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--background-color);
     border: none;
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
@@ -96,7 +97,7 @@ button {
 }
 
 button:hover {
-    background-color: #2980b9;
+    background-color: var(--secondary-color);
 }
 
 .table-container {
@@ -117,17 +118,17 @@ th, td {
 
 th {
     background-color: var(--primary-color);
-    color: white;
+    color: var(--background-color);
     font-weight: 500;
 }
 
 tr:nth-child(even) {
-    background-color: #f8f9fa;
+    background-color: var(--hover-color);
 }
 
 footer {
     background-color: var(--primary-color);
-    color: white;
+    color: var(--background-color);
     text-align: center;
     padding: 1rem 0;
     margin-top: 2rem;
@@ -141,5 +142,38 @@ footer {
     .form-group {
         width: 100%;
     }
+}
+
+/* Estilos para simular la adición de nuevas filas */
+.new-row {
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo para el hover en las filas de la tabla */
+tr:hover {
+    background-color: var(--hover-color);
+}
+
+/* Estilo para el focus en los inputs */
+input:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+}
+
+/* Estilo para el botón activo */
+button:active {
+    transform: translateY(1px);
 }
 

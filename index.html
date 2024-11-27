@@ -16,7 +16,7 @@
     <main class="container">
         <section class="form-section">
             <h2>Registro de Nuevo Dispositivo</h2>
-            <form action="/procesar_registro" method="POST">
+            <form id="gps-form">
                 <div class="form-row">
                     <div class="form-group">
                         <label for="marca">Marca:</label>
@@ -75,7 +75,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr class="existing-row">
                             <td>Teltonika</td>
                             <td>FMB920</td>
                             <td>123456789012345</td>
@@ -84,7 +84,24 @@
                             <td>XYZ123</td>
                             <td>Toyota Corolla</td>
                         </tr>
-                        <!-- Más filas estáticas -->
+                        <tr class="new-row">
+                            <td>Queclink</td>
+                            <td>GV300</td>
+                            <td>987654321098765</td>
+                            <td>2024-11-28</td>
+                            <td>Movistar</td>
+                            <td>ABC789</td>
+                            <td>Honda Civic</td>
+                        </tr>
+                        <tr class="new-row">
+                            <td>Concox</td>
+                            <td>GT06N</td>
+                            <td>456789012345678</td>
+                            <td>2024-11-29</td>
+                            <td>Entel</td>
+                            <td>DEF456</td>
+                            <td>Nissan Sentra</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -97,4 +114,3 @@
     </footer>
 </body>
 </html>
-
