@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Dispositivos GPS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Registro de Dispositivos GPS</h1>
+    </header>
+    <main>
+        <form action="/procesar_registro" method="POST">
+            <div style="width: 48%;">
+                <label for="marca">Marca:</label>
+                <input type="text" id="marca" name="marca" required>
+            </div>
+            <div style="width: 48%;">
+                <label for="modelo">Modelo:</label>
+                <input type="text" id="modelo" name="modelo" required>
+            </div>
+            <div style="width: 48%;">
+                <label for="imei">IMEI:</label>
+                <input type="text" id="imei" name="imei" required>
+            </div>
+            <div style="width: 48%;">
+                <label for="fecha">Fecha de Instalación:</label>
+                <input type="date" id="fecha" name="fecha" required>
+            </div>
+            <div style="width: 48%;">
+                <label for="simCard">Proveedor SIM Card:</label>
+                <input type="text" id="simCard" name="simCard" required>
+            </div>
+            <div style="width: 48%;">
+                <label for="placa">Placa del Auto:</label>
+                <input type="text" id="placa" name="placa" required>
+            </div>
+            <div style="width: 48%;">
+                <label for="modeloAuto">Modelo del Auto:</label>
+                <input type="text" id="modeloAuto" name="modeloAuto" required>
+            </div>
+            <div style="width: 100%;">
+                <button type="submit">Registrar</button>
+            </div>
+        </form>
+
+        <h2>Dispositivos Registrados</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>IMEI</th>
+                    <th>Fecha de Instalación</th>
+                    <th>SIM Card</th>
+                    <th>Placa</th>
+                    <th>Modelo del Auto</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Teltonika</td>
+                    <td>FMB920</td>
+                    <td>123456789012345</td>
+                    <td>2024-11-27</td>
+                    <td>Claro</td>
+                    <td>XYZ123</td>
+                    <td>Toyota Corolla</td>
+                </tr>
+                <!-- Más filas estáticas -->
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>
